@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar styling from original site */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #dc143c;
+}
+
+section {
+    padding: 100px 0;
+}
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    background: #111;
+    transition: all 0.3s ease;
+}
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span {
+    color: #dc143c;
+}
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+    color: #dc143c;
+}
+
+/* Home Section styles */
+.home {
+    display: flex;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1920') no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width {
+    margin: auto 0 auto 40px;
+    display: flex;
+}
+.home .home-content .text-1 {
+    font-size: 25px;
+}
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span {
+    color: #dc143c;
+    font-weight: 500;
+}
+.home .home-content a {
+    display: inline-block;
+    background: #dc143c;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid #dc143c;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover {
+    color: #dc143c;
+    background: none;
+}
+
+/* Common Section Heading Setup */
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    font-size: 20px;
+    color: #dc143c;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* About Section styles */
+.about {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+}
+.about .title::after {
+    content: "who i am";
+}
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left {
+    width: 45%;
+}
+.about .about-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right {
+    width: 50%;
+}
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span {
+    color: #dc143c;
+}
+.about .about-content .right p {
+    text-align: justify;
+    line-height: 26px;
+}
+.about .about-content .right a {
+    display: inline-block;
+    background: #dc143c;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #dc143c;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover {
+    color: #dc143c;
+    background: none;
+}
+
+/* Services / Skills Grid styles */
+.services {
+    color: #fff;
+    background: #111;
+    font-family: 'Poppins', sans-serif;
+}
+.services .title::before {
+    background: #fff;
+}
+.services .title::after {
+    background: #111;
+    content: "what i provide";
+}
+.services .services-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.services .services-content .card {
+    background: #222;
+    width: calc(33% - 20px);
+    text-align: center;
+    border-radius: 6px;
+    padding: 40px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.services .services-content .card:hover {
+    background: #dc143c;
+    transform: scale(1.05);
+}
+.services .services-content .card i {
+    font-size: 50px;
+    color: #dc143c;
+    transition: color 0.3s ease;
+}
+.services .services-content .card:hover i {
+    color: #fff;
+}
+.services .services-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* Talents Section styles */
+.skills {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+}
+.skills .title::after {
+    content: "what i know";
+}
+.skills .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.skills .skills-content .column {
+    width: 100%;
+}
+.skills .skills-content .left .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p {
+    text-align: justify;
+    line-height: 26px;
+}
+
+/* Contact Section styles */
+.contact {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+}
+.contact .title::after {
+    content: "get in touch";
+}
+.contact .contact-content {
+    display: flex;
+    justify-content: center;
+}
+.contact .contact-content .left {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+.contact .contact-content .left .text {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.contact .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+.contact .row i {
+    font-size: 25px;
+    color: #dc143c;
+    width: 50px;
+}
+.contact .info {
+    text-align: left;
+    margin-left: 15px;
+}
+.contact .info .head {
+    font-weight: 500;
+}
+.contact .info .sub-title {
+    color: #666;
+}
+.contact .social-links {
+    margin: 30px 0;
+}
+.contact .social-links a {
+    font-size: 24px;
+    color: #111;
+    margin: 0 12px;
+    transition: color 0.3s ease;
+}
+.contact .social-links a:hover {
+    color: #dc143c;
+}
+.contact .cv-btn {
+    display: inline-block;
+    background: #dc143c;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: 2px solid #dc143c;
+    transition: all 0.3s ease;
+}
+.contact .cv-btn:hover {
+    color: #dc143c;
+    background: none;
+}
+
+/* Footer styles */
+footer {
+    background: #111;
+    padding: 20px 30px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+footer a {
+    color: #dc143c;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 947px) {
+    .max-width { padding: 0 50px; }
+    .about .about-content .left, .about .about-content .right { width: 100%; }
+    .about .about-content .left { display: flex; justify-content: center; margin-bottom: 40px; }
+    .services .services-content .card { width: calc(50% - 10px); }
+}
+@media (max-width: 690px) {
+    .home .home-content .text-2 { font-size: 55px; }
+    .home .home-content .text-3 { font-size: 30px; }
+    .services .services-content .card { width: 100%; }
+    .contact .row { margin-left: 10px; }
+}
